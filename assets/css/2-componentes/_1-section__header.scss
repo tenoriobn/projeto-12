@@ -1,0 +1,19 @@
+@import '../1-base/variaveis';
+
+@mixin font-style($font-size, $font-weigth, $text-align, $line-height) {
+    font-size: $font-size;
+    font-weight: $font-weigth;
+    line-height: $line-height;
+    text-align: $text-align;
+}
+
+.section__header {
+    &__subtitle {
+        @include font-style(2rem, 700, center, 2.5rem);
+    }
+
+    &__paragraph {
+        @include font-style(1rem, 400, center, 1.6rem);
+        margin-top: 1.75rem;
+    }
+}

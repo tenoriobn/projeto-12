@@ -53,8 +53,23 @@ table {
   border-spacing: 0;
 }
 
+.section__header__subtitle {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 2.5rem;
+  text-align: center;
+}
+.section__header__paragraph {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6rem;
+  text-align: center;
+  margin-top: 1.75rem;
+}
+
 html, body {
   background-color: hsl(0, 100%, 74%);
+  color: #FFFFFF;
   font-size: 1rem;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
@@ -62,6 +77,22 @@ html, body {
   height: 100vh;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url(../../img/bg-intro-mobile.png);
+}
+
+.main, .footer {
+  padding: 0 1rem 0 1rem;
+}
+
+@media screen and (min-width: 375px) {
+  .main, .footer {
+    padding: 0 1.5rem 0 1.5rem;
+  }
+}
 @media screen and (min-width: 992px) {
   html, body {
     margin: 0 auto;
