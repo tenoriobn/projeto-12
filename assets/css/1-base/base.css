@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/
     v2.0 | 20110126
     License: none (public domain)
@@ -53,6 +54,14 @@ table {
   border-spacing: 0;
 }
 
+.section__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  margin-top: 6.25rem;
+  max-width: 425px;
+}
 .section__header__subtitle {
   font-size: 2rem;
   font-weight: 700;
@@ -67,25 +76,162 @@ table {
   margin-top: 1.75rem;
 }
 
-html, body {
-  background-color: hsl(0, 100%, 74%);
-  color: #FFFFFF;
+.section__form {
+  margin: 4.25rem 0 4.25rem 0;
+  max-width: 425px;
+  align-self: center;
+}
+.section__form .card {
+  display: flex;
+  justify-content: center;
+  background-color: hsl(248, 32%, 49%);
+  border-radius: 0.5rem;
+  box-shadow: 0px 8px 0px 0px #DD6767;
+  padding: 1.5rem 0 1.5rem 0;
+}
+.section__form .card__promotion {
   font-size: 1rem;
-  font-family: "Poppins", sans-serif;
   font-weight: 400;
+  line-height: 1.6rem;
+  text-align: center;
+  width: 11.25rem;
+}
+.section__form .card__promotion .card__try {
+  font-size: "";
+  font-weight: 700;
+  line-height: "";
+  text-align: "";
+}
+.section__form .form {
+  background-color: #FFFFFF;
+  border-radius: 0.5rem;
+  box-shadow: 0px 8px 0px 0px #DD6767;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   width: 100%;
-  height: 100vh;
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+}
+.section__form .form .container__input .form__field {
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: "";
+  text-align: "";
+  /*                
+      background-image: url(../../img/icon-error.svg);
+      background-repeat: no-repeat;
+      background-position: right;
+      background-position-x: 95%;
+
+      border-color: red;
+  */
+  border: 1px solid #DEDEDE;
+  border-radius: 0.5rem;
+  color: hsl(249, 10%, 26%);
+  height: 3.375rem;
+  outline: none;
+  padding-left: 1.25rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+.section__form .form .container__input .form__field::-moz-placeholder {
+  color: rgb(103, 102, 108);
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: "";
+  text-align: "";
+}
+.section__form .form .container__input .form__field::placeholder {
+  color: rgb(103, 102, 108);
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: "";
+  text-align: "";
+}
+.section__form .form .container__input .form__field:focus {
+  border-color: hsl(248, 32%, 49%);
+}
+.section__form .form .container__input .error__message {
+  display: none;
+  color: red;
+  font-size: 0.75rem;
+  font-weight: "";
+  line-height: "";
+  text-align: end;
+  margin-top: 0.625rem;
+}
+.section__form .form__button {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: "";
+  text-align: "";
+  background-color: hsl(154, 59%, 51%);
+  border: 1px solid rgb(54, 178, 124);
+  border-radius: 0.5rem;
+  color: #FFFFFF;
+  cursor: pointer;
+  text-transform: uppercase;
+  height: 3.5rem;
+}
+.section__form .form__button:hover {
+  background-color: rgb(119, 226, 180);
+}
+.section__form .form .terms {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.6rem;
+  text-align: center;
+  color: #DEDEDE;
+  max-width: 425px;
+}
+.section__form .form .terms__style {
+  font-size: "";
+  font-weight: 600;
+  line-height: "";
+  text-align: "";
+  color: hsl(0, 100%, 74%);
+}
+
+.footer {
+  margin-bottom: 1.5rem;
+}
+.footer .attribution {
+  align-self: center;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6rem;
+  text-align: center;
+}
+.footer .attribution a {
+  font-weight: 500;
+  color: hsl(248, 32%, 49%);
+  text-decoration: none;
 }
 
 body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-color: hsl(0, 100%, 74%);
+  color: #FFFFFF;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
   background-image: url(../../img/bg-intro-mobile.png);
+}
+@media screen and (min-width: 992px) {
+  body {
+    background-image: url(../../img/bg-intro-desktop.png);
+  }
 }
 
 .main, .footer {
   padding: 0 1rem 0 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 @media screen and (min-width: 375px) {
@@ -94,8 +240,11 @@ body {
   }
 }
 @media screen and (min-width: 992px) {
-  html, body {
+  .main, .footer {
     margin: 0 auto;
     width: 80%;
   }
-}/*# sourceMappingURL=base.css.map */
+}
+/*
+    Estilizar para versão tablet e versão desktop para finalizar responsividade
+*//*# sourceMappingURL=base.css.map */

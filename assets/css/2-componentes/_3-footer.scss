@@ -1,0 +1,23 @@
+@import '../1-base/variaveis';
+
+@mixin font-style($font-size, $font-weigth, $text-align, $line-height) {
+    font-size: $font-size;
+    font-weight: $font-weigth;
+    line-height: $line-height;
+    text-align: $text-align;
+}
+
+.footer {
+    margin-bottom: 1.5rem;
+    
+    .attribution {
+        align-self: center;
+        @include font-style(1rem, 400, center, 1.6rem);
+
+        a {
+            font-weight: 500;
+            color: $blue;
+            text-decoration: none;
+        }
+    }
+}

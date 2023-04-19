@@ -8,6 +8,15 @@
 }
 
 .section__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+
+    margin-top: 6.25rem;
+
+    max-width: 425px;
+
     &__subtitle {
         @include font-style(2rem, 700, center, 2.5rem);
     }

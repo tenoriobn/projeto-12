@@ -1,0 +1,118 @@
+@import '../1-base/variaveis';
+
+@mixin font-style($font-size, $font-weigth, $text-align, $line-height) {
+    font-size: $font-size;
+    font-weight: $font-weigth;
+    line-height: $line-height;
+    text-align: $text-align;
+}
+
+.section__form {
+    margin: 4.25rem 0 4.25rem 0;
+    max-width: 425px;
+    align-self: center;
+
+    .card {
+        display: flex;
+        justify-content: center;
+
+        background-color: $blue;
+        border-radius: .5rem;
+
+        box-shadow: 0px 8px 0px 0px $red-shadow;
+
+        padding: 1.5rem 0 1.5rem 0;
+        
+        &__promotion {
+            @include font-style(1rem, 400, center, 1.6rem);
+            width: 11.25rem;
+
+            .card__try {
+                @include font-style('', 700, '', '');
+            }
+        }
+    }
+
+    .form {
+        background-color: $white;
+        border-radius: .5rem;
+        box-shadow: 0px 8px 0px 0px $red-shadow;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+        
+        margin-top: 1.5rem;
+        padding: 1.5rem;
+
+        .container__input {
+            .form__field {
+                @include font-style(.875rem, 600, '','');
+                /*                
+                    background-image: url(../../img/icon-error.svg);
+                    background-repeat: no-repeat;
+                    background-position: right;
+                    background-position-x: 95%;
+
+                    border-color: red;
+                */
+
+
+                border: 1px solid $light-gray;
+                border-radius: .5rem;
+                color: $dark-blue;
+                height: 3.375rem;
+    
+                outline: none;
+    
+                padding-left: 1.25rem;
+                width: 100%;
+                box-sizing: border-box;
+    
+                &::placeholder {
+                    color: $dark-gray;
+                    @include font-style(.875rem, 600, '','');
+                }
+    
+                &:focus {
+                    border-color: $blue;
+                }
+            }
+
+            .error__message {
+                display: none;
+                color: red;
+                @include font-style(.75rem, '', end, '');
+                margin-top: .625rem;
+            }
+        }
+
+        &__button {
+            @include font-style(1rem, 700, '','');
+            background-color: $green;
+            border: 1px solid $secondary-green;
+            border-radius: .5rem;
+            color: $white;
+            cursor: pointer;
+            text-transform: uppercase;
+
+            height: 3.5rem;
+
+            &:hover {
+                background-color: $tertiary-green;
+            }
+        }
+
+        .terms {
+            @include font-style(14px, 500, center, 1.6rem);
+            color: $light-gray;
+            max-width: 425px;
+
+            &__style {
+                @include font-style('', 600, '', '');
+                color: $red;
+            }
+        }
+    }
+}

@@ -2,40 +2,48 @@
 @import './variaveis';
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 @import './../2-componentes/1-section__header';
-
-html, body {
-    background-color: $red;
-    color: $white;
-    font-size: 1rem;
-    font-family: $poppins;
-    font-weight: 400;
-
-    width: 100%;
-    height: 100vh;
-}
+@import './../2-componentes/2-section__form';
+@import './../2-componentes/3-footer';
 
 body {
     display: flex;
     flex-direction: column;
     justify-content: center;
 
+    background-color: $red;
+    color: $white;
+    font-size: 1rem;
+    font-family: $poppins;
+    font-weight: 400;
+
     background-image: url(../../img/bg-intro-mobile.png);
+
+    @media screen and (min-width: 992px) {
+        background-image: url(../../img/bg-intro-desktop.png);
+    }
 }
 
 .main, .footer {
     padding: 0 1rem 0 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 @media screen and (min-width: 375px) {
     .main, .footer {
         padding: 0 1.5rem 0 1.5rem;
     }
-
 }
 
 @media screen and (min-width: 992px) {
-    html, body {
+    .main, .footer {
         margin: 0 auto;
         width: 80%;
     }
 }
+
+
+/*
+    Estilizar para versão tablet e versão desktop para finalizar responsividade
+*/
