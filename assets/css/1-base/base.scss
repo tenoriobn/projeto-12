@@ -37,9 +37,28 @@ body {
 }
 
 @media screen and (min-width: 992px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
+    }
+
     .main, .footer {
         margin: 0 auto;
         width: 80%;
+    }
+
+    .main {
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 2rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .main {
+        gap: 0rem;
     }
 }
 

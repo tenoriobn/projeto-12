@@ -76,9 +76,51 @@ table {
   margin-top: 1.75rem;
 }
 
+@media screen and (min-width: 768px) {
+  .section__header {
+    max-width: 640px;
+  }
+  .section__header__subtitle {
+    font-size: 3rem;
+    font-weight: "";
+    line-height: 3.5rem;
+    text-align: "";
+  }
+  .section__header__paragraph {
+    font-size: "";
+    font-weight: "";
+    line-height: 1.75rem;
+    text-align: "";
+  }
+}
+@media screen and (min-width: 992px) {
+  .section__header {
+    justify-content: flex-start;
+    margin-top: 0rem;
+    max-width: 408px;
+  }
+  .section__header__subtitle {
+    font-size: "";
+    font-weight: "";
+    line-height: "";
+    text-align: left;
+  }
+  .section__header__paragraph {
+    font-size: "";
+    font-weight: "";
+    line-height: "";
+    text-align: left;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section__header {
+    max-width: 500px;
+  }
+}
 .section__form {
   margin: 4.25rem 0 4.25rem 0;
   max-width: 425px;
+  width: 100%;
   align-self: center;
 }
 .section__form .card {
@@ -160,7 +202,7 @@ table {
   font-weight: "";
   line-height: "";
   text-align: end;
-  margin-top: 0.625rem;
+  margin: 0.625rem 0rem 0.375rem 0rem;
 }
 .section__form .form__button {
   font-size: 1rem;
@@ -194,6 +236,33 @@ table {
   color: hsl(0, 100%, 74%);
 }
 
+@media screen and (min-width: 768px) {
+  .section__form {
+    max-width: 640px;
+  }
+  .section__form .card {
+    padding: 1.25rem 0 1.25rem 0;
+  }
+  .section__form .card__promotion {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .section__form {
+    margin: 0rem 0 0rem 0;
+    max-width: 544px;
+  }
+  .section__form .form .container__input .form__field {
+    padding-left: 2rem;
+  }
+  .section__form .form .terms {
+    font-size: 12px;
+    font-weight: "";
+    line-height: "";
+    text-align: "";
+    max-width: 100%;
+  }
+}
 .footer {
   margin-bottom: 1.5rem;
 }
@@ -240,9 +309,25 @@ body {
   }
 }
 @media screen and (min-width: 992px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+  }
   .main, .footer {
     margin: 0 auto;
     width: 80%;
+  }
+  .main {
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 2rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .main {
+    gap: 0rem;
   }
 }
 /*

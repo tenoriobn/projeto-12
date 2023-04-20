@@ -10,6 +10,7 @@
 .section__form {
     margin: 4.25rem 0 4.25rem 0;
     max-width: 425px;
+    width: 100%;
     align-self: center;
 
     .card {
@@ -84,7 +85,7 @@
                 display: none;
                 color: red;
                 @include font-style(.75rem, '', end, '');
-                margin-top: .625rem;
+                margin: .625rem 0rem .375rem 0rem;
             }
         }
 
@@ -112,6 +113,40 @@
             &__style {
                 @include font-style('', 600, '', '');
                 color: $red;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .section__form {
+        max-width: 640px;
+
+        .card {
+            padding: 1.25rem 0 1.25rem 0;
+
+            &__promotion {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .section__form {
+        margin: 0rem 0 0rem 0;
+        max-width: 544px;
+
+        .form {
+            .container__input {
+                .form__field {
+                    padding-left: 2rem
+                }
+            }
+
+            .terms {
+                @include font-style(12px, '', '', '');
+                max-width: 100%;
             }
         }
     }

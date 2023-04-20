@@ -26,3 +26,39 @@
         margin-top: 1.75rem;
     }
 }
+
+@media screen and (min-width: 768px) {
+    .section__header {
+        max-width: 640px;
+    
+        &__subtitle {
+            @include font-style(3rem, '', '', 3.5rem);
+        }
+    
+        &__paragraph {
+            @include font-style('', '', '', 1.75rem);
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .section__header {
+        justify-content: flex-start;
+        margin-top: 0rem;
+        max-width: 408px;
+    
+        &__subtitle {
+            @include font-style('', '', left, '');
+        }
+    
+        &__paragraph {
+            @include font-style('', '', left, '');
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .section__header {
+        max-width: 500px;
+    }
+}
