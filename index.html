@@ -20,24 +20,24 @@
                 <h3 class="card__promotion"><span class="card__try">Try it free 7 days</span> then $20/mo. thereafter</h3>
             </aside>
 
-            <form action="" class="form">
+            <form action="" class="form" id="form">
                 <div class="container__input">
-                    <input type="text" class="form__field" placeholder="First Name">
+                    <input type="text" class="form__field" placeholder="First Name" required>
                     <p class="error__message">First Name cannot be empity</p>
                 </div>
 
                 <div class="container__input">
-                    <input type="text" class="form__field" placeholder="Last Name">
+                    <input type="text" class="form__field" placeholder="Last Name" required>
                     <p class="error__message">First Name cannot be empity</p>
                 </div>
 
                 <div class="container__input">
-                    <input type="text" class="form__field" placeholder="Email Address">
+                    <input type="email" class="form__field" placeholder="Email Address" required>
                     <p class="error__message">First Name cannot be empity</p>
                 </div>
 
                 <div class="container__input">
-                    <input type="text" class="form__field" placeholder="Password">
+                    <input type="password" class="form__field" placeholder="Password" required>
                     <p class="error__message">First Name cannot be empity</p>
                 </div>
 
@@ -62,10 +62,5 @@
 
 <!--
 Os usuários devem ser capazes de:
-    - Ver o layout ideal para o site, independente do tamanho da tela do dispositivo
-    - Ver os estados de foco para todos os elementos interativos na página
-    - Receber uma mensagem de erro quando o `formulário` for enviado se:
-        + Qualquer campo `input` estiver vazio. A mensagem para este erro deve dizer *"[Nome do campo] não pode estar vazio"*
-        + O endereço de e-mail não estiver no formato correto (ou seja, um endereço de e-mail correto deve ter esta estrutura: 
-            +`name@host.tld`). A mensagem para este erro deve dizer *"Parece que este não é um e-mail"*
+    - Ver o layout ideal para o site, independente do tamanho da tela do dispositivo***
 -->
