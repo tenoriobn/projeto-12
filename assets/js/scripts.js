@@ -1,3 +1,6 @@
+import passwordValidator from "./2-passwordValidator.js";
+import emailValidator from "./3-emailValidator.js";
+
 const requiredField = document.querySelectorAll("[required]");
 
 requiredField.forEach((field) => {
@@ -5,7 +8,20 @@ requiredField.forEach((field) => {
 })
 
 function checkField(field) {
-    console.log("Deu certo!")
+    if (field.name === "emailField") {
+        const isValid = emailValidator(field.value);
+        
+        if(isValid) {
+            console.log("email válido")
+        } else {
+            console.log("email inválido")
+        }
+    }
+
+    if (field.name === "passwordField") {
+        const isValid = passwordValidator(field.value);
+        console.log(isValid);
+    }
 }
 
 
