@@ -1,5 +1,6 @@
-import passwordValidator from "./2-passwordValidator.js";
+import nameValidator from "./2-nameValidator.js";
 import emailValidator from "./3-emailValidator.js";
+import passwordValidator from "./4-passwordValidator.js";
 
 const requiredField = document.querySelectorAll("[required]");
 
@@ -8,6 +9,10 @@ requiredField.forEach((field) => {
 })
 
 function checkField(field) {
+    if (field.name === "nameField" || field.name === "lastNameField") {
+        nameValidator(field);
+    }
+    
     if (field.name === "emailField") {
         const isValid = emailValidator(field.value);
         
