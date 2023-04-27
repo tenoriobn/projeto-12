@@ -195,6 +195,18 @@ table {
 .section__form .form .container__input .form__field:focus {
   border-color: hsl(248, 32%, 49%);
 }
+.section__form .form .container__input .form__field__error {
+  background-image: url(../../img/icon-error.svg);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-position-x: 95%;
+  font-size: "";
+  font-weight: 500;
+  line-height: "";
+  text-align: "";
+  border-color: red;
+  color: red;
+}
 .section__form .form .container__input .error__message {
   display: none;
   color: red;

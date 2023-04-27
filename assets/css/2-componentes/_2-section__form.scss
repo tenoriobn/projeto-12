@@ -81,6 +81,16 @@
                 }
             }
 
+            .form__field__error {
+                background-image: url(../../img/icon-error.svg);
+                background-repeat: no-repeat;
+                background-position: right;
+                background-position-x: 95%;
+                @include font-style('', 500, '','');
+                border-color: red;
+                color: red;
+            }
+
             .error__message {
                 display: none;
                 color: red;

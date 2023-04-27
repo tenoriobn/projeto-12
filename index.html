@@ -22,23 +22,23 @@
 
             <form action="" class="form" id="form">
                 <div class="container__input">
-                    <input name="nameField" type="text" class="form__field" id="name__field" placeholder="First Name" required>
-                    <p class="error__message">First Name cannot be empity</p>
+                    <input name="nameField" type="text" class="form__field" id="form__field name__field" placeholder="First Name" minlength="3" required>
+                    <p class="error__message" id="#error__message">First Name cannot be empity</p>
                 </div>
 
                 <div class="container__input">
-                    <input name="lastNameField" type="text" class="form__field" id="lastname__field" placeholder="Last Name" required>
-                    <p class="error__message">First Name cannot be empity</p>
+                    <input name="lastNameField" type="text" class="form__field" id="form__field lastname__field" placeholder="Last Name" minlength="3" required>
+                    <p class="error__message" id="#error__message">First Name cannot be empity</p>
                 </div>
 
                 <div class="container__input">
-                    <input name="emailField" type="email" class="form__field" id="email__field" placeholder="Email Address" required>
-                    <p class="error__message">First Name cannot be empity</p>
+                    <input name="emailField" type="email" class="form__field" id="form__field email__field" placeholder="Email Address" minlength="8" required>
+                    <p class="error__message" id="#error__message">First Name cannot be empity</p>
                 </div>
 
                 <div class="container__input">
-                    <input name="passwordField" type="password" class="form__field" id="password__field" placeholder="Password" required>
-                    <p class="error__message">First Name cannot be empity</p>
+                    <input name="passwordField" type="password" class="form__field" id="form__field password__field" placeholder="Password" minlength="8" required>
+                    <p class="error__message" id="#error__message">First Name cannot be empity</p>
                 </div>
 
                 <button type="submit" class="form__button">Claim your free trial</button>

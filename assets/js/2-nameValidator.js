@@ -18,8 +18,8 @@ function validLastNameRules(field) {
             break;
     }
 
-    if (field.value.length < 2 ){
-        console.log(`O ${fieldName} deve conter no mínimo 2 caracteres`);
+    if (field.value.length < 3 ){
+        console.log(`O ${fieldName} deve conter no mínimo 3 caracteres`);
     } else if (field.value.length > 15 && field.name === 'nameField' || field.value.length > 50 && field.name === 'lastNameField') {
         console.log(`O ${fieldName} deve conter no máximo ${field.name === 'nameField' ? '15' : '50'} caracteres`);
     } else if (regex.test(field.value)) {
