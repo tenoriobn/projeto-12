@@ -19,32 +19,24 @@ const errorTypes = [
 
 const messages = {
     nameField: {
-        valueMissing: "Campo não pode estar vazio",
-        typeMismatch: "Caracteres não permitidos nesse campo",
-        patternMismatch: "Formato não é válido nesse campo",
-        tooShort: "É necessário mais caracteres nesse campo",
-        customError: "Erro customizado",
+        valueMissing: "First Name cannot be empty",
+        tooShort: "Need more characters in the name",
+        customError: "The name cannot contain numbers",
     },
     lastNameField: {
-        valueMissing: "Campo não pode estar vazio",
-        typeMismatch: "Caracteres não permitidos nesse campo",
-        patternMismatch: "Formato não é válido nesse campo",
-        tooShort: "É necessário mais caracteres nesse campo",
-        customError: "Erro customizado",
+        valueMissing: "Last name cannot be empty",
+        tooShort: "Need more characters in last name",
+        customError: "Last name cannot contain numbers",
     },
     emailField: {
-        valueMissing: "Campo não pode estar vazio",
-        typeMismatch: "Caracteres não permitidos nesse campo",
-        patternMismatch: "Formato não é válido nesse campo",
-        tooShort: "É necessário mais caracteres nesse campo",
-        customError: "Erro customizado",
+        valueMissing: "Email cannot be empty",
+        tooShort: "Need more characters in email",
+        customError: "Look like this is not an email",
     },
     passwordField: {
-        valueMissing: "Campo não pode estar vazio",
-        typeMismatch: "Caracteres não permitidos nesse campo",
-        patternMismatch: "Formato não é válido nesse campo",
-        tooShort: "É necessário mais caracteres nesse campo",
-        customError: "Erro customizado",
+        valueMissing: "Password cannot be empty",
+        tooShort: "Need more characters in password",
+        customError: "Invalid password. Try something like '@Abcd1234'",
     },
 }
 
@@ -57,18 +49,11 @@ function checkField(field) {
     }
     
     if (field.name === "emailField") {
-        const isValid = emailValidator(field.value);
-        
-        if(isValid) {
-            console.log("email válido")
-        } else {
-            console.log("email inválido")
-        }
+        emailValidator(field);
     }
 
     if (field.name === "passwordField") {
-        const isValid = passwordValidator(field.value);
-        console.log(isValid);
+        passwordValidator(field);
     }
 
     errorTypes.forEach(error => {
@@ -101,7 +86,8 @@ function checkField(field) {
         + Não esquecer de mostrar o icon de "!" dentro dos inputs não válidados.**
     
     - Corrigir input de password para que se retornar true apareça mensagem de erro.
-        + isso porque o console.log aponta 'false' mas não aparece mensagem.
+        + isso porque o console.log aponta 'false' mas não aparece mensagem.**
+        + Isso acontece nos outros inputs quando se trata de nome com número, isso deveria disparar 'typeMismatch' ou 'patternMismatch'**
     
     - Se tentar dar submit com os inputs em branco, apontar mensagem customizada em baixo dos inputs
         + Portanto, criar um evento ou funcionalidade para conferir cada campo
@@ -113,7 +99,8 @@ function checkField(field) {
 Os usuários devem ser capazes de:
     - Ver os estados de foco para todos os elementos interativos na página***
     - Receber uma mensagem de erro quando o `formulário` for enviado se:
-        + Qualquer campo `input` estiver vazio. A mensagem para este erro deve dizer *"[Nome do campo] não pode estar vazio"*
+        + Qualquer campo `input` estiver vazio. A mensagem para este erro deve dizer *"[Nome do campo] não pode estar vazio"
+
         + O endereço de e-mail não estiver no formato correto (ou seja, um endereço de e-mail correto deve ter esta estrutura: 
-            +`name@host.tld`). A mensagem para este erro deve dizer *"Parece que este não é um e-mail"*
+            +`name@host.tld`). A mensagem para este erro deve dizer *"Parece que este não é um e-mail"**
 */

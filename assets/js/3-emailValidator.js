@@ -1,8 +1,19 @@
-export default function emailValidator(email) {
-    return validEmailRules(email);
+export default function emailValidator(field) {
+    validEmailRules(field);
+
 }
 
-function validEmailRules(email) {
+function validEmailRules(field) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
+
+    if (!field.value){
+        console.log('O email deve conter no mínimo 8 caracteres');
+        return false
+    } else if (field.value.length < 8) {
+        console.log('O email deve conter no mínimo 8 caracteres');
+        return false;
+    } else if (!emailRegex.test(field.value)) {
+        field.setCustomValidity('Invalid email address');
+        return false;
+    }
 }
