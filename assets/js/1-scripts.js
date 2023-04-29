@@ -3,11 +3,52 @@ import emailValidator from "./3-emailValidator.js";
 import passwordValidator from "./4-passwordValidator.js";
 
 const requiredField = document.querySelectorAll("[required]");
+const btnForm = document.getElementById("form__button");
+const form = document.querySelector(".form");
+
+btnForm.addEventListener("click", () => {
+    const field = document.querySelectorAll(".form__field");
+    let emptyFields = [];
+    field.forEach((field) => {
+        if (field.value === '') {
+            emptyFields.push(field);
+        }
+    })
+
+    if (emptyFields.length > 0) {
+        emptyFields.forEach((emptyField) => {
+            let message = messages[emptyField.name].valueMissing;
+            let errorMessage = emptyField.parentNode.querySelector(".error__message");
+            let errorInput = emptyField.parentNode.querySelector(".form__field");
+
+            errorMessage.textContent = message;
+            errorMessage.style.display = "block";
+            errorInput.classList.add('form__field__error');
+            errorInput.placeholder = "";
+        });
+        return false
+    }
+})
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const formRegistration = {
+        "nameField": e.target.elements["nameField"].value,
+        "lastNameField": e.target.elements["lastNameField"].value,
+        "emailField": e.target.elements["emailField"].value,
+        "passwordField": e.target.elements["passwordField"].value,
+    }
+
+    sessionStorage.setItem("cadastro", JSON.stringify(formRegistration));
+
+    window.location.href = 'index.html';
+})
 
 requiredField.forEach((field) => {
     field.addEventListener("blur", () => checkField(field));
     field.addEventListener("invalid", event => event.preventDefault());
-})
+});
 
 const errorTypes = [
     'valueMissing',
