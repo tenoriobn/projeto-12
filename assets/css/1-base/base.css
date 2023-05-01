@@ -335,6 +335,7 @@ body {
     flex-direction: row;
     justify-content: space-around;
     gap: 2rem;
+    height: 90vh;
   }
 }
 @media screen and (min-width: 1200px) {
