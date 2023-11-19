@@ -41,7 +41,7 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        height: 100vh;
+        min-height: 100vh;
     }
 
     .main, .footer {
@@ -53,7 +53,7 @@ body {
         flex-direction: row;
         justify-content: space-around;
         gap: 2rem;
-        height: 90vh;
+        min-height: 90vh;
     }
 }
 
