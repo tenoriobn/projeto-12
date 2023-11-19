@@ -118,7 +118,7 @@ table {
   }
 }
 .section__form {
-  margin: 4.25rem 0 4.25rem 0;
+  padding: 4.25rem 0 4.25rem 0;
   max-width: 425px;
   width: 100%;
   align-self: center;
